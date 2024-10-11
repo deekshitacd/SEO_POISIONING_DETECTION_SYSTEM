@@ -37,9 +37,9 @@ FREQUENCY_THRESHOLD = 5  # Example threshold, adjust as needed
 
 # Fetch URLs from Google Custom Search API
 def fetch_urls_from_api(query, num_results=10):
-    API_KEY = 'AIzaSyDwB0XYr3_wxTt8kytooAp7nR2I5frHmII'
-    CSE_ID = '94516cfa072c04f15'
-    url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDwB0XYr3_wxTt8kytooAp7nR2I5frHmII&cx=94516cfa072c04f15&q=SEARCH_QUERY"
+    API_KEY = ' '
+    CSE_ID = ''
+    url = " "
     params = {
         'key': API_KEY,
         'cx': CSE_ID,
@@ -136,7 +136,7 @@ def MenuView(request):
     poisoned_count = 0
 
     if query:
-        keywords_file = 'C:/Users/Anusha/keywords.txt'
+        keywords_file = 'keywords.txt'
         POISONED_KEYWORDS = read_keywords_from_file(keywords_file)
 
         urls = fetch_urls_from_api(query, num_results=10)
